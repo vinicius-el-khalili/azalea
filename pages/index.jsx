@@ -7,7 +7,11 @@ export default function Home() {
     
     <>      
       <div className={styles.mainContainer}>
-        <div style={{border:"1px solid black"}}>
+        <div style={{
+          border:"2px solid black",
+          overflow:"hidden",
+          borderRadius:"100%"
+          }}>
           <ProfilePicture></ProfilePicture>
         </div>
       </div>

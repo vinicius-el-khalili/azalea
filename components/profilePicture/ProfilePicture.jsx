@@ -4,20 +4,28 @@ import { useState } from "react"
 const ProfilePicture = () => {
 
     const [color1,setColor1]=useState("#CF4DCE")
+    const [color2,setColor2]=useState("#0002A1")
+    const [color3,setColor3]=useState("transparent")
+    function randomColor(){return("#"+Math.floor(Math.random()*16777215).toString(16))}
     return(
-        <div onClick={()=>{setColor1("black")}}>
+        <div onClick={()=>{
+            setColor1(randomColor())
+            setColor2(randomColor())
+        }}>
         
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width={450}
-          height={450}
+          width= {350}
+          height={350}
           viewBox="0 0 300 300"
-          style={{backgroundColor:"white"}}
+          style={{
+            backgroundColor:color3
+          }}
         >
           <defs>
             <linearGradient id="a" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stopColor={color1} />
-              <stop offset="100%" stopColor="#0002A1" />
+              <stop offset="100%" stopColor={color2} />
             </linearGradient>
           </defs>
           <g
