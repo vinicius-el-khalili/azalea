@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from "@/styles/AppLayout.module.css"
+import styles from "@/styles/AppLayout.module.scss"
 
 export default function AppLayout({children}){
     return(
@@ -12,6 +12,8 @@ export default function AppLayout({children}){
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
+
+    <main>{children}</main>
 
     </>
     
