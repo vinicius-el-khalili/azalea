@@ -8,11 +8,18 @@ export default function Home() {
     <>      
       <div className={styles.mainContainer}>
         <div style={{
-          border:"2px solid black",
-          overflow:"hidden",
-          borderRadius:"100%"
-          }}>
+          display:"flex",
+          flexDirection:"column",
+          gap:"5vh"
+        }}>
           <ProfilePicture></ProfilePicture>
+          <div>
+            <h1>vinicius</h1>
+            <h1>el</h1>
+            <h1>khalili</h1>
+            <hr style={{width:"40%",margin:"20px auto 20px auto"}}/>
+            <h3>creative developer</h3>
+          </div>
         </div>
       </div>
     </>
