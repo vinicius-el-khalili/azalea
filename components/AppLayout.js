@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import styles from "@/styles/AppLayout.module.css"
 
 export default function AppLayout({children}){
     return(
