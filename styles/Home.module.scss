@@ -1,6 +1,5 @@
 .mainContainer{
-    background-color: darkblue;
-    color: white;
-    font-size: 3rem;
-    text-align: center;
+    height: 100vh;
+    display: grid;
+    place-content: center;
 }
