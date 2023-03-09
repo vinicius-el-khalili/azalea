@@ -1,0 +1,17 @@
+.layoutContainer{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto;
+}
+.navContainer{
+    background-color: transparent;
+}
+.buttonsContainer{
+    background-color: azure;
+}
+.typedWords{
+    background-color:thistle;
+}
+.footer{
+    background-color: aquamarine;
+}
