@@ -2,22 +2,30 @@ import Head from 'next/head'
 import styles from "@/styles/AppLayout.module.scss"
 import ProfilePicture from "./ProfilePicture";
 import TypedWords from "./TypedWords";
+import { useRef } from 'react';
 
 export default function AppLayout({children}){
-    return(
-    
+
+  const typedWords = useRef()
+  function setTypedWord(index){
+    typedWords.current.write(index)
+  }
+
+  return(    
     <div className={styles.layoutContainer}>
 
-      <ProfilePicture size={150}/> 
+      <div className={styles.picture}>
+        <ProfilePicture size={150}/>
+      </div> 
 
       <div className={styles.buttonsContainer}>
-        <button>Projects</button>
-        <button>Info</button>
-        <button>Contact</button>
+        <div className={styles.button} onClick={()=>{setTypedWord(0)}} >Info     </div>
+        <div className={styles.button} onClick={()=>{setTypedWord(1)}} >Projects </div>
+        <div className={styles.button} onClick={()=>{setTypedWord(2)}} >Contact  </div>
       </div>
 
       <div className={styles.typedWords}>
-          <TypedWords texts={["Projects","Info","Contact"]}/>
+          <TypedWords ref={typedWords} texts={["Info","Projects","Contact"]}/>
       </div>
       
       <main style={styles.contentContainer}>

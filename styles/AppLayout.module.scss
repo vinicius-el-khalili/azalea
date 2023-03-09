@@ -1,17 +1,59 @@
+$primary-dark: #272727;
+$primary-light: #EFF1F3;
+
 .layoutContainer{
+    
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto auto auto 1fr auto;
+
 }
-.navContainer{
-    background-color: transparent;
+.picture{
+    
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
 }
 .buttonsContainer{
-    background-color: azure;
+    
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+
+    .button{
+
+        width: 8rem;
+        height: 2rem;
+        display: grid;
+        place-content: center;
+        text-align: center;
+        cursor: pointer;
+        &:hover{
+
+            background-color: $primary-light;
+            color: $primary-dark
+
+        }
+
+    };
+
 }
 .typedWords{
-    background-color:thistle;
+    
+    width: 30rem;
+    height: 6rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4.5rem;
 }
 .footer{
-    background-color: aquamarine;
+    
+    background-color: $primary-light;
+    color: $primary-dark;
+    text-align: center;
+
 }

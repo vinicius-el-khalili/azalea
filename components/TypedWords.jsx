@@ -7,8 +7,8 @@ class TypedWords extends React.Component{
     constructor(props){
         super(props)
         this.state={
-            output: "________________________",
-            current:"________________________",
+            output: "_________",
+            current:"_________",
             running:false
         }
         this.cycle=this.cycle.bind(this)
@@ -19,7 +19,7 @@ class TypedWords extends React.Component{
         console.log(this.props.texts[wrd_i])
         let output=""
         for (let j=0;j<this.state.current.length;j++){
-            await delay(1000/this.state.current.length,()=>{
+            await delay(350/this.state.current.length,()=>{
                 output+=this.state.current[j]
                 this.setState({output:output})
             })
@@ -29,7 +29,7 @@ class TypedWords extends React.Component{
         let output=this.state.current
         this.setState({output:output})
         for (let i=this.state.current.length;i>=0;i--){
-            await delay(500/this.state.current.length,()=>{
+            await delay(350/this.state.current.length,()=>{
                 output=this.state.current.slice(0,i)
                 this.setState({output:output})
             })

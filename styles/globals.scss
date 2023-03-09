@@ -1,10 +1,15 @@
+
 $primary-dark: #272727;
 $primary-light: #EFF1F3;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+$font-1: "Space Grotesk", sans-serif;
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: $font-1;
 }
 body{
     background-color: $primary-dark;
