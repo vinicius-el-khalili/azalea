@@ -25,7 +25,10 @@ export default function AppLayout({children}){
       </div>
 
       <div className={styles.typedWords}>
-          <TypedWords ref={typedWords} texts={["Info","Projects","Contact"]}/>
+          <TypedWords
+          ref={typedWords}
+          texts={["Info","Projects","Contact"]}
+           />
       </div>
       
       <main style={styles.contentContainer}>

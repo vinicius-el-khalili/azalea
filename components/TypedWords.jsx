@@ -7,8 +7,8 @@ class TypedWords extends React.Component{
     constructor(props){
         super(props)
         this.state={
-            output: "_________",
-            current:"_________",
+            output: "be curious",
+            current:"be curious",
             running:false
         }
         this.cycle=this.cycle.bind(this)
@@ -55,7 +55,7 @@ class TypedWords extends React.Component{
     }
     render(){
         return(
-            <>{this.state.output}_</>
+            <div>{this.state.output}_</div>
         )
     }
 }

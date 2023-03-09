@@ -33,8 +33,8 @@ const ProfilePicture = ({size}) => {
               height={size}
               viewBox="0 0 300 300"
               style={{
-                backgroundColor:"white",
-                opacity:.9,
+                backgroundColor:"#EFF1F3",
+                opacity:1,
                 borderRadius:"100%",
                 border:"0px solid black",
                 margin:"5px",

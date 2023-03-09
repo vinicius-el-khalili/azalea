@@ -1,5 +1,8 @@
 $primary-dark: #272727;
 $primary-light: #EFF1F3;
+$screaming-green: #66FF66;
+$blizzard-blue:#50BFE6;
+$red-orange:#FF681F;
 
 .layoutContainer{
     
@@ -19,7 +22,6 @@ $primary-light: #EFF1F3;
     
     display: flex;
     justify-content: center;
-    gap: 5rem;
 
     .button{
 
@@ -30,30 +32,65 @@ $primary-light: #EFF1F3;
         text-align: center;
         cursor: pointer;
         &:hover{
-
             background-color: $primary-light;
-            color: $primary-dark
-
+            color: $primary-dark;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        &:nth-child(1){
+            transform: translate(0,-32px);
+            &:hover{
+                background-color: $blizzard-blue;
+            }
+        }
+        &:nth-child(2){
+            &:hover{
+                background-color: $red-orange;
+            }
+        }
+        &:nth-child(3){
+            transform: translate(0,-32px);
+            &:hover{
+                background-color: $screaming-green;
+            }
         }
 
     };
 
 }
 .typedWords{
+
+    ::-moz-selection { /* Code for Firefox */
+        color: $primary-dark;
+        background: $primary-light;
+    }
+      
+    ::selection {
+        color: $primary-dark;
+        background: $primary-light;
+    }
     
-    width: 30rem;
-    height: 6rem;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    padding-top: 6rem;
+    padding-bottom: .5rem;
+    text-align: center;
     margin: auto;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 4.5rem;
+    font-size: 4rem;
+    div{
+        grid-column: 2 / span 2;
+    }
 }
 .footer{
     
-    background-color: $primary-light;
+    background-color: $primary-dark;
     color: $primary-dark;
     text-align: center;
+    &:hover{
+        background-color: $primary-light;
+        color: $primary-dark;
+        transition: 1s;
+    }
 
 }
