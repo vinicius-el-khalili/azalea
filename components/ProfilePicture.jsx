@@ -1,8 +1,7 @@
 import * as React from "react"
 import { useState } from "react"
 
-const ProfilePicture = () => {
-    const size = 250
+const ProfilePicture = ({size}) => {
     const [color1,setColor1]=useState("#000000")
     const [color2,setColor2]=useState("#000000")
     const [color3,setColor3]=useState("transparent")
@@ -25,8 +24,8 @@ const ProfilePicture = () => {
           background: `linear-gradient(to right, ${color1}, ${color2})`,
           height:size+10,
           width:size+10,
-          border:"2px solid black",
-          transform:`translate(${size/2+5}px,0)`
+          border:"0px solid black",
+          transform:`translate(${size/2+5}px,0)`,
           }}></div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +36,7 @@ const ProfilePicture = () => {
                 backgroundColor:"white",
                 opacity:.9,
                 borderRadius:"100%",
-                border:"2px solid black",
+                border:"0px solid black",
                 margin:"5px",
                 transform:`translate(-${size/2+5}px,0)`
               }}

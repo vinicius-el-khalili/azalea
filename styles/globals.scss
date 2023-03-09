@@ -1,4 +1,5 @@
-$primary-color: white;
+$primary-dark: #272727;
+$primary-light: #EFF1F3;
 
 *{
     margin: 0;
@@ -6,5 +7,8 @@ $primary-color: white;
     box-sizing: border-box;
 }
 body{
-    background-color: $primary-color;
+    background-color: $primary-dark;
+    color: $primary-light;
+    min-height: 100vh;
+    
 }

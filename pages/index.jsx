@@ -1,27 +1,24 @@
 import styles from '@/styles/Home.module.scss'
-import ProfilePicture from '@/components/profilePicture/ProfilePicture'
-
+import ProfilePicture from '@/components/ProfilePicture'
+import TypedWords from '@/components/TypedWords'
+import { createRef } from 'react'
 
 export default function Home() {
+
+  const child = createRef()
+  const test = (_t) => {
+    child.current.write(_t)
+  }
   return (
     
-    <>      
-      <div className={styles.mainContainer}>
-        <div style={{
-          display:"flex",
-          flexDirection:"column",
-          gap:"5vh"
-        }}>
-          <ProfilePicture></ProfilePicture>
-          <div>
-            <h1>Such</h1>
-            <h1>a nice</h1>
-            <h1>component</h1>
-            <hr style={{width:"40%",margin:"20px auto 20px auto"}}/>
-            <h3>neat</h3>
-          </div>
-        </div>
+    <>
+      <ProfilePicture size={100}></ProfilePicture>
+      <div>
+        <TypedWords ref={child} texts={["Projects","Info","Contact"]}/>
       </div>
+      <button onClick={()=>{test(0)}}>test</button>
+      <button onClick={()=>{test(2)}}>test</button>
+      <button onClick={()=>{test(1)}}>test</button>
     </>
 
   )
