@@ -5,7 +5,7 @@ export default function Parent(){
         
         <div>
             <Child></Child>
-            <button onClick={()=>{}}></button>
+            <button onClick={()=>{}}>BUTTON</button>
         </div>
 
         </>

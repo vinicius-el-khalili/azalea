@@ -7,8 +7,8 @@ class TypedWords extends React.Component{
     constructor(props){
         super(props)
         this.state={
-            output: "be curious",
-            current:"be curious",
+            output: "Vinicius El Khalili",
+            current:"Vinicius El Khalili",
             running:false
         }
         this.cycle=this.cycle.bind(this)
