@@ -6,7 +6,6 @@ export default function Home() {
   return (
     
     <div style={{display:'grid',placeContent:'center'}}>
-    <Parent></Parent>
     </div>
 
   )
