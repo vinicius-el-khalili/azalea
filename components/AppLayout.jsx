@@ -19,9 +19,9 @@ export default function AppLayout({children}){
       </div> 
 
       <div className={styles.buttonsContainer}>
-        <div className={styles.button} onClick={()=>{setTypedWord(0)}} >Info     </div>
-        <div className={styles.button} onClick={()=>{setTypedWord(1)}} >Projects </div>
-        <div className={styles.button} onClick={()=>{setTypedWord(2)}} >Contact  </div>
+        <div className={styles.button} onClick={()=>{setTypedWord(0)}} >Info</div>
+        <div className={styles.button} onClick={()=>{setTypedWord(1)}} >Projects</div>
+        <div className={styles.button} onClick={()=>{setTypedWord(2)}} >Contact</div>
       </div>
 
       <div className={styles.typedWords}>
